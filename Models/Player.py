@@ -38,7 +38,7 @@ class Player(Model):
                 file.seek(0)
                 file.truncate()
                 json.dump(players, file, indent=4)
-   
+                 
     def get_players(self):
         """
         Charge et retourne la liste des joueurs depuis le fichier players.json.

@@ -29,9 +29,12 @@
                class="code sev- "><tt><i>4</i> <span class="kn">from</span> <span class="nn">Views.MatchView</span> <span class="kn">import</span> <span class="n">MatchView</span></tt>
             </div>
             <div id="l5"
-               class="code sev- "><tt><i>5</i> &nbsp;</tt>
+               class="code sev- "><tt><i>5</i> <span class="kn">from</span> <span class="nn">Views.RoundsView</span> <span class="kn">import</span> <span class="n">RoundsView</span></tt>
             </div>
             <div id="l6"
+               class="code sev- "><tt><i>6</i> &nbsp;</tt>
+            </div>
+            <div id="l7"
                class="code sev-2  le">
                <ul class="violations">
                
@@ -41,87 +44,87 @@
                      </span>
                      Expected 2 blank lines, found 1</li>
                
-               </ul><tt><i>6</i> <span class="k">class</span> <span class="nc">TestMatchView</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span></tt>
-            </div>
-            <div id="l7"
-               class="code sev- "><tt><i>7</i>     <span class="k">def</span> <span class="nf">setUp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span></tt>
+               </ul><tt><i>7</i> <span class="k">class</span> <span class="nc">TestMatchView</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span></tt>
             </div>
             <div id="l8"
-               class="code sev- "><tt><i>8</i>         <span class="bp">self</span><span class="o">.</span><span class="n">matchView</span> <span class="o">=</span> <span class="n">MatchView</span><span class="p">()</span></tt>
+               class="code sev- "><tt><i>8</i>     <span class="k">def</span> <span class="nf">setUp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span></tt>
             </div>
             <div id="l9"
-               class="code sev- "><tt><i>9</i> &nbsp;</tt>
+               class="code sev- "><tt><i>9</i>         <span class="bp">self</span><span class="o">.</span><span class="n">matchView</span> <span class="o">=</span> <span class="n">MatchView</span><span class="p">()</span></tt>
             </div>
             <div id="l10"
-               class="code sev- "><tt><i>10</i>     <span class="nd">@patch</span><span class="p">(</span><span class="s1">&#39;builtins.input&#39;</span><span class="p">,</span> <span class="n">side_effect</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;1&#39;</span><span class="p">])</span></tt>
+               class="code sev- "><tt><i>10</i> &nbsp;</tt>
             </div>
             <div id="l11"
-               class="code sev- "><tt><i>11</i>     <span class="k">def</span> <span class="nf">test_get_user_choice_valid_input</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mock_input</span><span class="p">):</span></tt>
+               class="code sev- "><tt><i>11</i>     <span class="nd">@patch</span><span class="p">(</span><span class="s1">&#39;builtins.input&#39;</span><span class="p">,</span> <span class="n">side_effect</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;1&#39;</span><span class="p">])</span></tt>
             </div>
             <div id="l12"
-               class="code sev- "><tt><i>12</i>         <span class="k">with</span> <span class="n">patch</span><span class="p">(</span><span class="s1">&#39;sys.stdout&#39;</span><span class="p">,</span> <span class="n">new</span><span class="o">=</span><span class="n">StringIO</span><span class="p">())</span> <span class="k">as</span> <span class="n">fake_out</span><span class="p">:</span></tt>
+               class="code sev- "><tt><i>12</i>     <span class="k">def</span> <span class="nf">test_get_user_choice_valid_input</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mock_input</span><span class="p">):</span></tt>
             </div>
             <div id="l13"
-               class="code sev- "><tt><i>13</i>             <span class="n">choice</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">matchView</span><span class="o">.</span><span class="n">get_user_choice</span><span class="p">()</span></tt>
+               class="code sev- "><tt><i>13</i>         <span class="k">with</span> <span class="n">patch</span><span class="p">(</span><span class="s1">&#39;sys.stdout&#39;</span><span class="p">,</span> <span class="n">new</span><span class="o">=</span><span class="n">StringIO</span><span class="p">())</span> <span class="k">as</span> <span class="n">fake_out</span><span class="p">:</span></tt>
             </div>
             <div id="l14"
-               class="code sev- "><tt><i>14</i>             <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">choice</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span></tt>
+               class="code sev- "><tt><i>14</i>             <span class="n">choice</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">matchView</span><span class="o">.</span><span class="n">get_user_choice</span><span class="p">()</span></tt>
             </div>
             <div id="l15"
-               class="code sev- "><tt><i>15</i>             <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">fake_out</span><span class="o">.</span><span class="n">getvalue</span><span class="p">()</span><span class="o">.</span><span class="n">strip</span><span class="p">(),</span> <span class="s2">&quot;Entrez votre choix (1, 2 ou 3): &quot;</span><span class="p">)</span></tt>
+               class="code sev- "><tt><i>15</i>             <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">choice</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span></tt>
             </div>
             <div id="l16"
-               class="code sev- "><tt><i>16</i> &nbsp;</tt>
+               class="code sev- "><tt><i>16</i>             <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">fake_out</span><span class="o">.</span><span class="n">getvalue</span><span class="p">()</span><span class="o">.</span><span class="n">strip</span><span class="p">(),</span> <span class="s2">&quot;Entrez votre choix (1, 2 ou 3): &quot;</span><span class="p">)</span></tt>
             </div>
             <div id="l17"
-               class="code sev- "><tt><i>17</i>     <span class="nd">@patch</span><span class="p">(</span><span class="s1">&#39;builtins.input&#39;</span><span class="p">,</span> <span class="n">side_effect</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;4&#39;</span><span class="p">,</span> <span class="s1">&#39;2&#39;</span><span class="p">])</span></tt>
+               class="code sev- "><tt><i>17</i> &nbsp;</tt>
             </div>
             <div id="l18"
-               class="code sev- "><tt><i>18</i>     <span class="k">def</span> <span class="nf">test_get_user_choice_invalid_then_valid_input</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mock_input</span><span class="p">):</span></tt>
+               class="code sev- "><tt><i>18</i>     <span class="nd">@patch</span><span class="p">(</span><span class="s1">&#39;builtins.input&#39;</span><span class="p">,</span> <span class="n">side_effect</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;4&#39;</span><span class="p">,</span> <span class="s1">&#39;2&#39;</span><span class="p">])</span></tt>
             </div>
             <div id="l19"
-               class="code sev- "><tt><i>19</i>         <span class="k">with</span> <span class="n">patch</span><span class="p">(</span><span class="s1">&#39;sys.stdout&#39;</span><span class="p">,</span> <span class="n">new</span><span class="o">=</span><span class="n">StringIO</span><span class="p">())</span> <span class="k">as</span> <span class="n">fake_out</span><span class="p">:</span></tt>
+               class="code sev- "><tt><i>19</i>     <span class="k">def</span> <span class="nf">test_get_user_choice_invalid_then_valid_input</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mock_input</span><span class="p">):</span></tt>
             </div>
             <div id="l20"
-               class="code sev- "><tt><i>20</i>             <span class="n">choice</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">matchView</span><span class="o">.</span><span class="n">get_user_choice</span><span class="p">()</span></tt>
+               class="code sev- "><tt><i>20</i>         <span class="k">with</span> <span class="n">patch</span><span class="p">(</span><span class="s1">&#39;sys.stdout&#39;</span><span class="p">,</span> <span class="n">new</span><span class="o">=</span><span class="n">StringIO</span><span class="p">())</span> <span class="k">as</span> <span class="n">fake_out</span><span class="p">:</span></tt>
             </div>
             <div id="l21"
-               class="code sev- "><tt><i>21</i>             <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">choice</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span></tt>
+               class="code sev- "><tt><i>21</i>             <span class="n">choice</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">matchView</span><span class="o">.</span><span class="n">get_user_choice</span><span class="p">()</span></tt>
             </div>
             <div id="l22"
-               class="code sev- "><tt><i>22</i>             <span class="bp">self</span><span class="o">.</span><span class="n">assertIn</span><span class="p">(</span><span class="s2">&quot;Choix invalide. Veuillez entrer 1, 2 ou 3.&quot;</span><span class="p">,</span> <span class="n">fake_out</span><span class="o">.</span><span class="n">getvalue</span><span class="p">()</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span></tt>
+               class="code sev- "><tt><i>22</i>             <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">choice</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span></tt>
             </div>
             <div id="l23"
-               class="code sev- "><tt><i>23</i> &nbsp;</tt>
+               class="code sev- "><tt><i>23</i>             <span class="bp">self</span><span class="o">.</span><span class="n">assertIn</span><span class="p">(</span><span class="s2">&quot;Choix invalide. Veuillez entrer 1, 2 ou 3.&quot;</span><span class="p">,</span> <span class="n">fake_out</span><span class="o">.</span><span class="n">getvalue</span><span class="p">()</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span></tt>
             </div>
             <div id="l24"
-               class="code sev- "><tt><i>24</i>     <span class="nd">@patch</span><span class="p">(</span><span class="s1">&#39;builtins.input&#39;</span><span class="p">,</span> <span class="n">side_effect</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;abc&#39;</span><span class="p">,</span> <span class="s1">&#39;1&#39;</span><span class="p">])</span></tt>
+               class="code sev- "><tt><i>24</i> &nbsp;</tt>
             </div>
             <div id="l25"
-               class="code sev- "><tt><i>25</i>     <span class="k">def</span> <span class="nf">test_get_user_choice_invalid_then_valid_string_input</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mock_input</span><span class="p">):</span></tt>
+               class="code sev- "><tt><i>25</i>     <span class="nd">@patch</span><span class="p">(</span><span class="s1">&#39;builtins.input&#39;</span><span class="p">,</span> <span class="n">side_effect</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;abc&#39;</span><span class="p">,</span> <span class="s1">&#39;1&#39;</span><span class="p">])</span></tt>
             </div>
             <div id="l26"
-               class="code sev- "><tt><i>26</i>         <span class="k">with</span> <span class="n">patch</span><span class="p">(</span><span class="s1">&#39;sys.stdout&#39;</span><span class="p">,</span> <span class="n">new</span><span class="o">=</span><span class="n">StringIO</span><span class="p">())</span> <span class="k">as</span> <span class="n">fake_out</span><span class="p">:</span></tt>
+               class="code sev- "><tt><i>26</i>     <span class="k">def</span> <span class="nf">test_get_user_choice_invalid_then_valid_string_input</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mock_input</span><span class="p">):</span></tt>
             </div>
             <div id="l27"
-               class="code sev- "><tt><i>27</i>             <span class="n">choice</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">matchView</span><span class="o">.</span><span class="n">get_user_choice</span><span class="p">()</span></tt>
+               class="code sev- "><tt><i>27</i>         <span class="k">with</span> <span class="n">patch</span><span class="p">(</span><span class="s1">&#39;sys.stdout&#39;</span><span class="p">,</span> <span class="n">new</span><span class="o">=</span><span class="n">StringIO</span><span class="p">())</span> <span class="k">as</span> <span class="n">fake_out</span><span class="p">:</span></tt>
             </div>
             <div id="l28"
-               class="code sev- "><tt><i>28</i>             <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">choice</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span></tt>
+               class="code sev- "><tt><i>28</i>             <span class="n">choice</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">matchView</span><span class="o">.</span><span class="n">get_user_choice</span><span class="p">()</span></tt>
             </div>
             <div id="l29"
-               class="code sev- "><tt><i>29</i>             <span class="bp">self</span><span class="o">.</span><span class="n">assertIn</span><span class="p">(</span><span class="s2">&quot;Entrée invalide. Veuillez entrer un numéro.&quot;</span><span class="p">,</span> <span class="n">fake_out</span><span class="o">.</span><span class="n">getvalue</span><span class="p">()</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span></tt>
+               class="code sev- "><tt><i>29</i>             <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">choice</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span></tt>
             </div>
             <div id="l30"
-               class="code sev- "><tt><i>30</i> &nbsp;</tt>
+               class="code sev- "><tt><i>30</i>             <span class="bp">self</span><span class="o">.</span><span class="n">assertIn</span><span class="p">(</span><span class="s2">&quot;Entrée invalide. Veuillez entrer un numéro.&quot;</span><span class="p">,</span> <span class="n">fake_out</span><span class="o">.</span><span class="n">getvalue</span><span class="p">()</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span></tt>
             </div>
             <div id="l31"
-               class="code sev- "><tt><i>31</i>     <span class="nd">@patch</span><span class="p">(</span><span class="s1">&#39;builtins.input&#39;</span><span class="p">,</span> <span class="n">side_effect</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;1&#39;</span><span class="p">])</span></tt>
+               class="code sev- "><tt><i>31</i> &nbsp;</tt>
             </div>
             <div id="l32"
-               class="code sev- "><tt><i>32</i>     <span class="k">def</span> <span class="nf">test_display_match_results</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mock_input</span><span class="p">):</span></tt>
+               class="code sev- "><tt><i>32</i>     <span class="nd">@patch</span><span class="p">(</span><span class="s1">&#39;builtins.input&#39;</span><span class="p">,</span> <span class="n">side_effect</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;1&#39;</span><span class="p">])</span></tt>
             </div>
             <div id="l33"
+               class="code sev- "><tt><i>33</i>     <span class="k">def</span> <span class="nf">test_display_match_results</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mock_input</span><span class="p">):</span></tt>
+            </div>
+            <div id="l34"
                class="code sev-2  le">
                <ul class="violations">
                
@@ -131,25 +134,22 @@
                      </span>
                      Line too long (126 > 109 characters)</li>
                
-               </ul><tt><i>33</i>         <span class="n">match</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;player1&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;first_name&#39;</span><span class="p">:</span> <span class="s1">&#39;John&#39;</span><span class="p">,</span> <span class="s1">&#39;last_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Doe&#39;</span><span class="p">},</span> <span class="s1">&#39;player2&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;first_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Jane&#39;</span><span class="p">,</span> <span class="s1">&#39;last_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Doe&#39;</span><span class="p">}}</span></tt>
-            </div>
-            <div id="l34"
-               class="code sev- "><tt><i>34</i>         <span class="k">with</span> <span class="n">patch</span><span class="p">(</span><span class="s1">&#39;sys.stdout&#39;</span><span class="p">,</span> <span class="n">new</span><span class="o">=</span><span class="n">StringIO</span><span class="p">())</span> <span class="k">as</span> <span class="n">fake_out</span><span class="p">:</span></tt>
+               </ul><tt><i>34</i>         <span class="n">match</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;player1&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;first_name&#39;</span><span class="p">:</span> <span class="s1">&#39;John&#39;</span><span class="p">,</span> <span class="s1">&#39;last_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Doe&#39;</span><span class="p">},</span> <span class="s1">&#39;player2&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;first_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Jane&#39;</span><span class="p">,</span> <span class="s1">&#39;last_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Doe&#39;</span><span class="p">}}</span></tt>
             </div>
             <div id="l35"
-               class="code sev- "><tt><i>35</i>             <span class="n">user_choice</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">matchView</span><span class="o">.</span><span class="n">display_match_results</span><span class="p">(</span><span class="n">match</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span></tt>
+               class="code sev- "><tt><i>35</i>         <span class="k">with</span> <span class="n">patch</span><span class="p">(</span><span class="s1">&#39;sys.stdout&#39;</span><span class="p">,</span> <span class="n">new</span><span class="o">=</span><span class="n">StringIO</span><span class="p">())</span> <span class="k">as</span> <span class="n">fake_out</span><span class="p">:</span></tt>
             </div>
             <div id="l36"
-               class="code sev- "><tt><i>36</i>             <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">user_choice</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span></tt>
+               class="code sev- "><tt><i>36</i>             <span class="n">user_choice</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">matchView</span><span class="o">.</span><span class="n">display_match_results</span><span class="p">(</span><span class="n">match</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span></tt>
             </div>
             <div id="l37"
-               class="code sev- "><tt><i>37</i>             <span class="n">expected_output</span> <span class="o">=</span> <span class="s2">&quot;Match 1 Round 2 - Résultats</span><span class="se">\n</span><span class="s2">1 - John Doe</span><span class="se">\n</span><span class="s2">2 - Jane Doe</span><span class="se">\n</span><span class="s2">3 - égalité&quot;</span></tt>
+               class="code sev- "><tt><i>37</i>             <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">user_choice</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span></tt>
             </div>
             <div id="l38"
-               class="code sev- "><tt><i>38</i>             <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">fake_out</span><span class="o">.</span><span class="n">getvalue</span><span class="p">()</span><span class="o">.</span><span class="n">strip</span><span class="p">(),</span> <span class="n">expected_output</span><span class="p">)</span></tt>
+               class="code sev- "><tt><i>38</i>             <span class="n">expected_output</span> <span class="o">=</span> <span class="s2">&quot;Match 1 Round 2 - Résultats</span><span class="se">\n</span><span class="s2">1 - John Doe</span><span class="se">\n</span><span class="s2">2 - Jane Doe</span><span class="se">\n</span><span class="s2">3 - égalité&quot;</span></tt>
             </div>
             <div id="l39"
-               class="code sev- "><tt><i>39</i> &nbsp;</tt>
+               class="code sev- "><tt><i>39</i>             <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">fake_out</span><span class="o">.</span><span class="n">getvalue</span><span class="p">()</span><span class="o">.</span><span class="n">strip</span><span class="p">(),</span> <span class="n">expected_output</span><span class="p">)</span></tt>
             </div>
             <div id="l40"
                class="code sev-2  le">
@@ -157,14 +157,101 @@
                
                   <li>
                      <span class="count sev-2">
-                        E305
+                        E302
                      </span>
-                     Expected 2 blank lines after class or function definition, found 1</li>
+                     Expected 2 blank lines, found 0</li>
                
-               </ul><tt><i>40</i> <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span></tt>
+               </ul><tt><i>40</i> <span class="k">class</span> <span class="nc">TestRoundsView</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span></tt>
             </div>
             <div id="l41"
-               class="code sev- "><tt><i>41</i>     <span class="n">unittest</span><span class="o">.</span><span class="n">main</span><span class="p">()</span></tt>
+               class="code sev- "><tt><i>41</i>     <span class="k">def</span> <span class="nf">setUp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span></tt>
+            </div>
+            <div id="l42"
+               class="code sev- "><tt><i>42</i>         <span class="bp">self</span><span class="o">.</span><span class="n">roundsView</span> <span class="o">=</span> <span class="n">RoundsView</span><span class="p">()</span></tt>
+            </div>
+            <div id="l43"
+               class="code sev- "><tt><i>43</i> &nbsp;</tt>
+            </div>
+            <div id="l44"
+               class="code sev- "><tt><i>44</i>     <span class="nd">@patch</span><span class="p">(</span><span class="s1">&#39;builtins.input&#39;</span><span class="p">,</span> <span class="n">return_value</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">)</span></tt>
+            </div>
+            <div id="l45"
+               class="code sev- "><tt><i>45</i>     <span class="k">def</span> <span class="nf">test_ask_for_next_round_yes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mock_input</span><span class="p">):</span></tt>
+            </div>
+            <div id="l46"
+               class="code sev- "><tt><i>46</i>         <span class="k">with</span> <span class="n">patch</span><span class="p">(</span><span class="s1">&#39;sys.stdout&#39;</span><span class="p">,</span> <span class="n">new</span><span class="o">=</span><span class="n">StringIO</span><span class="p">())</span> <span class="k">as</span> <span class="n">fake_out</span><span class="p">:</span></tt>
+            </div>
+            <div id="l47"
+               class="code sev- "><tt><i>47</i>             <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">roundsView</span><span class="o">.</span><span class="n">ask_for_next_round</span><span class="p">()</span></tt>
+            </div>
+            <div id="l48"
+               class="code sev- "><tt><i>48</i>             <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">response</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">)</span></tt>
+            </div>
+            <div id="l49"
+               class="code sev- "><tt><i>49</i>             <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">fake_out</span><span class="o">.</span><span class="n">getvalue</span><span class="p">()</span><span class="o">.</span><span class="n">strip</span><span class="p">(),</span> <span class="s2">&quot;Voulez-vous passer au round suivant ? o/n: &quot;</span><span class="p">)</span></tt>
+            </div>
+            <div id="l50"
+               class="code sev- "><tt><i>50</i> &nbsp;</tt>
+            </div>
+            <div id="l51"
+               class="code sev- "><tt><i>51</i>     <span class="nd">@patch</span><span class="p">(</span><span class="s1">&#39;builtins.input&#39;</span><span class="p">,</span> <span class="n">return_value</span><span class="o">=</span><span class="s1">&#39;n&#39;</span><span class="p">)</span></tt>
+            </div>
+            <div id="l52"
+               class="code sev- "><tt><i>52</i>     <span class="k">def</span> <span class="nf">test_ask_for_next_round_no</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mock_input</span><span class="p">):</span></tt>
+            </div>
+            <div id="l53"
+               class="code sev- "><tt><i>53</i>         <span class="k">with</span> <span class="n">patch</span><span class="p">(</span><span class="s1">&#39;sys.stdout&#39;</span><span class="p">,</span> <span class="n">new</span><span class="o">=</span><span class="n">StringIO</span><span class="p">())</span> <span class="k">as</span> <span class="n">fake_out</span><span class="p">:</span></tt>
+            </div>
+            <div id="l54"
+               class="code sev- "><tt><i>54</i>             <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">roundsView</span><span class="o">.</span><span class="n">ask_for_next_round</span><span class="p">()</span></tt>
+            </div>
+            <div id="l55"
+               class="code sev- "><tt><i>55</i>             <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">response</span><span class="p">,</span> <span class="s1">&#39;n&#39;</span><span class="p">)</span></tt>
+            </div>
+            <div id="l56"
+               class="code sev- "><tt><i>56</i>             <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">fake_out</span><span class="o">.</span><span class="n">getvalue</span><span class="p">()</span><span class="o">.</span><span class="n">strip</span><span class="p">(),</span> <span class="s2">&quot;Voulez-vous passer au round suivant ? o/n: &quot;</span><span class="p">)</span></tt>
+            </div>
+            <div id="l57"
+               class="code sev- "><tt><i>57</i> &nbsp;</tt>
+            </div>
+            <div id="l58"
+               class="code sev- "><tt><i>58</i>     <span class="nd">@patch</span><span class="p">(</span><span class="s1">&#39;builtins.input&#39;</span><span class="p">,</span> <span class="n">return_value</span><span class="o">=</span><span class="s1">&#39;O&#39;</span><span class="p">)</span></tt>
+            </div>
+            <div id="l59"
+               class="code sev- "><tt><i>59</i>     <span class="k">def</span> <span class="nf">test_ask_for_next_round_uppercase_yes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mock_input</span><span class="p">):</span></tt>
+            </div>
+            <div id="l60"
+               class="code sev- "><tt><i>60</i>         <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">roundsView</span><span class="o">.</span><span class="n">ask_for_next_round</span><span class="p">()</span></tt>
+            </div>
+            <div id="l61"
+               class="code sev- "><tt><i>61</i>         <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">response</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">)</span></tt>
+            </div>
+            <div id="l62"
+               class="code sev- "><tt><i>62</i> &nbsp;</tt>
+            </div>
+            <div id="l63"
+               class="code sev- "><tt><i>63</i>     <span class="nd">@patch</span><span class="p">(</span><span class="s1">&#39;builtins.input&#39;</span><span class="p">,</span> <span class="n">return_value</span><span class="o">=</span><span class="s1">&#39;N&#39;</span><span class="p">)</span></tt>
+            </div>
+            <div id="l64"
+               class="code sev- "><tt><i>64</i>     <span class="k">def</span> <span class="nf">test_ask_for_next_round_uppercase_no</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mock_input</span><span class="p">):</span></tt>
+            </div>
+            <div id="l65"
+               class="code sev- "><tt><i>65</i>         <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">roundsView</span><span class="o">.</span><span class="n">ask_for_next_round</span><span class="p">()</span></tt>
+            </div>
+            <div id="l66"
+               class="code sev- "><tt><i>66</i>         <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">response</span><span class="p">,</span> <span class="s1">&#39;n&#39;</span><span class="p">)</span></tt>
+            </div>
+            <div id="l67"
+               class="code sev- "><tt><i>67</i> &nbsp;</tt>
+            </div>
+            <div id="l68"
+               class="code sev- "><tt><i>68</i> &nbsp;</tt>
+            </div>
+            <div id="l69"
+               class="code sev- "><tt><i>69</i> <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span></tt>
+            </div>
+            <div id="l70"
+               class="code sev- "><tt><i>70</i>     <span class="n">unittest</span><span class="o">.</span><span class="n">main</span><span class="p">()</span></tt>
             </div>
             
          </div>

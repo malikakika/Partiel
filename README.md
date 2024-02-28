@@ -49,5 +49,15 @@ Pour générer un rapport de conformité du code avec flake8-html, exécutez la 
 flake8 --format=html --htmldir=rapport_flake8
 ```
 
+## Pour ouvrir le rapport 
+
+```
+cd rapport_flake8
+
+start index.html
+```
+
+
+
 Ouvrez `rapport_flake8/index.html` dans votre navigateur pour voir le rapport.
 
