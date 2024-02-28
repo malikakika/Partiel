@@ -26,6 +26,7 @@ class RoundsController:
         """
         shuffle(players)
         return players
+        
 
     def sort_players_by_score(self, players):
         """

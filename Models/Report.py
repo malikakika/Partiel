@@ -10,7 +10,8 @@ class Report:
 
     def load_players(self):
         """
-        Charge la liste des joueurs depuis le fichier players.json. En cas d'erreur (fichier introuvable ou erreur
+        Charge la liste des joueurs depuis le fichier players.json.
+        En cas d'erreur (fichier introuvable ou erreur
         de décodage JSON), un message d'erreur est affiché.
 
         Returns:
@@ -28,7 +29,8 @@ class Report:
     # Optionnellement, si vous voulez aussi charger les tournois :
     def load_tournaments(self):
         """
-        Charge la liste des tournois depuis le fichier tournaments.json. En cas d'erreur (fichier introuvable ou erreur
+        Charge la liste des tournois depuis le fichier tournaments.json.
+        En cas d'erreur (fichier introuvable ou erreur
         de décodage JSON), un message d'erreur est affiché.
 
         Returns:

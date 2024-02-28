@@ -1,7 +1,4 @@
 from Views.View import View
-
-
-
 class TournamentView(View):
     def __init__(self):
         self.description = None
@@ -10,7 +7,6 @@ class TournamentView(View):
         self.start_date = None
         self.location = None
         self.name = None
-
 
     def get_tournament_info(self):
         """
@@ -48,7 +44,8 @@ class TournamentView(View):
         for i, tournament in enumerate(tournaments_reversed):
             registered_players = len(tournament['player_list'])
             print(
-                f"{i + 1} - {tournament['name']} à {tournament['location']} du {tournament['start_date']} au {tournament['end_date']} - Rounds: {tournament['rounds']} - Inscrits: {registered_players}")
+                f"{i + 1} - {tournament['name']} à {tournament['location']} du {tournament['start_date']} au {tournament['end_date']} - Rounds: {tournament['rounds']} - Inscrits: {registered_players}"
+            )
         while True:
             try:
                 tournament_index = int(input("\nEntrez le numéro du tournoi que vous voulez sélectionner : ")) - 1

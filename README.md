@@ -20,6 +20,7 @@ cd OCR_P4
 2. Activez l'environnement virtuel :
 
 Sur Windows :
+python
 
 ```sh
 env\Scripts\activate

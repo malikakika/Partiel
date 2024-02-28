@@ -46,7 +46,8 @@ class MenuController:
 
     def report_menu_choice(self):
         """
-        Gère le choix de l'utilisateur dans le sous-menu des rapports et appelle les méthodes correspondantes.
+        Gère le choix de l'utilisateur dans le sous-menu des rapports et
+        appelle les méthodes correspondantes.
         """
         choice = self.menu.report_menu()
 

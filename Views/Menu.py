@@ -1,13 +1,8 @@
-
-
 class Menu:
-
     def __init__(self):
         self.choice = None
 
     def main_menu(self):
-        
-        
         """
         Affiche le menu principal du gestionnaire de tournois d'échecs.
 
